@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-hk">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -90,7 +90,7 @@
 <meta property="og:title" content="个人博客">
 <meta property="og:url" content="http:&#x2F;&#x2F;solamish.github.io&#x2F;404.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:locale" content="zh-hk">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-11-02T07:15:15.063Z">
 <meta name="twitter:card" content="summary">
 
@@ -142,7 +142,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-hk">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -190,7 +190,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            首頁
+            首页
           </a>
         </li>
       
@@ -200,7 +200,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            關於
+            关于
           </a>
         </li>
       
@@ -210,7 +210,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            標籤
+            标签
           </a>
         </li>
       
@@ -220,7 +220,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            分類
+            分类
           </a>
         </li>
       
@@ -230,7 +230,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            歸檔
+            归档
           </a>
         </li>
       
@@ -304,9 +304,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">發表於</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-11-02T14:22:17+08:00">2019-11-02</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-02T23:10:38+08:00">2019-11-02</time>
             
 
             
@@ -314,6 +314,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/golang%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" itemprop="url" rel="index">
+                    <span itemprop="name">golang基础语法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -339,9 +361,9 @@
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字數統計&#58;</span>
+                  <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字數統計">21k</span>
+                <span title="字数统计">20k</span>
               
 
               
@@ -353,9 +375,9 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">閱讀時長 &asymp;</span>
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="閱讀時長">19 mins.</span>
+                <span title="阅读时长">19 mins.</span>
               
             </div>
           
@@ -375,11 +397,7 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: Golang基础语法之Channel</span><br><span class="line">categories: </span><br><span class="line">- golang</span><br><span class="line">tags:</span><br><span class="line">- golang</span><br><span class="line">- 语法</span><br></pre></td></tr></table></figure>
-
-
-<h1 id="Channel"><a href="#Channel" class="headerlink" title="Channel"></a>Channel</h1><h4 id="Channel的基本语法"><a href="#Channel的基本语法" class="headerlink" title="Channel的基本语法"></a>Channel的基本语法</h4><p>刚刚为了解决并发’写’的问题，我们使用了互斥锁。但是，频繁加锁会加大系统资源的开销，那么有没有更高效的办法来解决这个问题呢？那就是channel。</p>
-<p>如果说goroutine是Go语言程序的并发体的话，那么channels则是它们之间的通信机制。使用channel，我们可以在两个goroutine之间通信（传输数据）。</p>
+        <h2 id="Channel"><a href="#Channel" class="headerlink" title="Channel"></a>Channel</h2><h3 id="Channel的基本语法"><a href="#Channel的基本语法" class="headerlink" title="Channel的基本语法"></a>Channel的基本语法</h3><p>如果说goroutine是Go语言程序的并发体的话，那么channels则是它们之间的通信机制。使用channel，我们可以在两个goroutine之间通信（传输数据）。</p>
 <p>使用内置的make函数，我们可以创建一个channel：</p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ch := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>) <span class="comment">// ch的数据类型是chan int</span></span><br></pre></td></tr></table></figure>
 
@@ -405,7 +423,7 @@
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">数据已发送</span><br><span class="line"><span class="number">6666</span></span><br></pre></td></tr></table></figure>
 
 <p>我们成功地接受到了channel中的值，并解决了goroutine的阻塞问题。（只有channel的接收者，也会导致当前goroutine的阻塞，感兴趣的同学可以自己模拟实现下）</p>
-<h4 id="带缓存的Channel"><a href="#带缓存的Channel" class="headerlink" title="带缓存的Channel"></a>带缓存的Channel</h4><p>带缓存的Channel内部持有一个元素队列。队列的最大容量是在调用make函数创建channel时通过第二个参数指定的。下面的语句创建了一个可以持有三个字符串元素的带缓存Channel。</p>
+<h3 id="带缓存的Channel"><a href="#带缓存的Channel" class="headerlink" title="带缓存的Channel"></a>带缓存的Channel</h3><p>带缓存的Channel内部持有一个元素队列。队列的最大容量是在调用make函数创建channel时通过第二个参数指定的。下面的语句创建了一个可以持有三个字符串元素的带缓存Channel。</p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ch = <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">string</span>, <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
 
 <p>我们可以在无阻塞的情况下连续向新创建的channel发送三个值：</p>
@@ -417,19 +435,19 @@
 <p>执行结果</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我发送了3个数据</span><br></pre></td></tr></table></figure>
 
-<h4 id="Range-amp-Close"><a href="#Range-amp-Close" class="headerlink" title="Range&amp;Close"></a>Range&amp;Close</h4><p><code>for value:=range ch</code>操作可以说是非常熟悉了，当我们遍历slice或者map时也是同样的用法</p>
+<h3 id="Range-amp-Close"><a href="#Range-amp-Close" class="headerlink" title="Range&amp;Close"></a>Range&amp;Close</h3><p><code>for value:=range ch</code>操作可以说是非常熟悉了，当我们遍历slice或者map时也是同样的用法</p>
 <p><code>close</code>也就是golang的内置函数，可以用于关闭一个channel</p>
 <p>对一个已经被close过的channel进行接收操作依然可以接受到之前已经成功发送的数据</p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fibonacci</span><span class="params">(n <span class="keyword">int</span>, c <span class="keyword">chan</span> <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	x, y := <span class="number">1</span>, <span class="number">1</span></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; n; i++ &#123;</span><br><span class="line">		c &lt;- x</span><br><span class="line">		x, y = y, x + y <span class="comment">//交换变量的便利写法</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">close</span>(c) <span class="comment">//关闭通道</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	c := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>, <span class="number">10</span>)</span><br><span class="line">	<span class="keyword">go</span> fibonacci(<span class="built_in">cap</span>(c), c) <span class="comment">//cap(c)即为c的容量大小</span></span><br><span class="line">    <span class="comment">// 不断读取channel数据，直到channel被显式关闭</span></span><br><span class="line">	<span class="keyword">for</span> i := <span class="keyword">range</span> c &#123; </span><br><span class="line">		fmt.Println(i)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>记住应该在生产者的地方关闭channel，而不是消费的地方去关闭它，这样容易引起panic。</p>
 <p>另外，关闭一个已经被关闭的channel也将导致panic。</p>
-<h4 id="单方向的Channel"><a href="#单方向的Channel" class="headerlink" title="单方向的Channel"></a>单方向的Channel</h4><p>前面我们提到，channel具有接受和发送两种操作，但如果我们只想要一个具有发送功能的channel应该怎么办呢？</p>
+<h3 id="单方向的Channel"><a href="#单方向的Channel" class="headerlink" title="单方向的Channel"></a>单方向的Channel</h3><p>前面我们提到，channel具有接受和发送两种操作，但如果我们只想要一个具有发送功能的channel应该怎么办呢？</p>
 <p>Go语言的类型系统提供了单方向的channel类型，分别用于只发送或只接收的channel。</p>
 <p>类型<code>chan&lt;- int</code>表示一个只发送int的channel，只能发送不能接收。相反，类型<code>&lt;-chan int</code>表示一个只接收int的channel，只能接收不能发送。</p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	send := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>)</span><br><span class="line">	<span class="keyword">go</span> counter(send)</span><br><span class="line">	squarer(send)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">counter</span><span class="params">(out <span class="keyword">chan</span>&lt;- <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	<span class="keyword">for</span> x := <span class="number">0</span>; x &lt; <span class="number">100</span>; x++ &#123;</span><br><span class="line">		out &lt;- x</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">close</span>(out)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">squarer</span><span class="params">(in &lt;-<span class="keyword">chan</span> <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	<span class="keyword">for</span> v := <span class="keyword">range</span> in &#123;</span><br><span class="line">		fmt.Println(v)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="通道死锁"><a href="#通道死锁" class="headerlink" title="通道死锁"></a>通道死锁</h4><p>通道两段互相阻塞对方，会形成死锁状态。Go运行时会检查并panic，停止程序。</p>
+<h3 id="通道死锁"><a href="#通道死锁" class="headerlink" title="通道死锁"></a>通道死锁</h3><p>通道两段互相阻塞对方，会形成死锁状态。Go运行时会检查并panic，停止程序。</p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	out := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>)</span><br><span class="line">	out &lt;- <span class="number">2</span></span><br><span class="line">	<span class="keyword">go</span> f1(out)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">f1</span><span class="params">(in <span class="keyword">chan</span> <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	fmt.Println(&lt;-in)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fatal error: all goroutines are asleep - deadlock!</span><br></pre></td></tr></table></figure>
@@ -455,6 +473,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag"># 后端</a>
+          
+            <a href="/tags/Golang/" rel="tag"># Golang</a>
+          
+        </div>
       
 
       
@@ -511,10 +537,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目錄
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            本站概覽
+            站点概览
           </li>
         </ul>
       
@@ -539,13 +565,31 @@
                 <a href="/archives/%20%7C%7C%20archive">
               
                   <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">文章</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -598,7 +642,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Channel"><span class="nav-number">1.</span> <span class="nav-text">Channel</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Channel的基本语法"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">Channel的基本语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不带缓存的channel"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">不带缓存的channel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#带缓存的Channel"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">带缓存的Channel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Range-amp-Close"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">Range&amp;Close</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#单方向的Channel"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">单方向的Channel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通道死锁"><span class="nav-number">1.0.0.6.</span> <span class="nav-text">通道死锁</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Select"><span class="nav-number">1.1.</span> <span class="nav-text">Select</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Channel"><span class="nav-number">1.</span> <span class="nav-text">Channel</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Channel的基本语法"><span class="nav-number">1.1.</span> <span class="nav-text">Channel的基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#不带缓存的channel"><span class="nav-number">1.1.1.</span> <span class="nav-text">不带缓存的channel</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#带缓存的Channel"><span class="nav-number">1.2.</span> <span class="nav-text">带缓存的Channel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Range-amp-Close"><span class="nav-number">1.3.</span> <span class="nav-text">Range&amp;Close</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单方向的Channel"><span class="nav-number">1.4.</span> <span class="nav-text">单方向的Channel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通道死锁"><span class="nav-number">1.5.</span> <span class="nav-text">通道死锁</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Select"><span class="nav-number">2.</span> <span class="nav-text">Select</span></a></li></ol></div>
             
 
           </div>
@@ -631,9 +675,9 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-      <span class="post-meta-item-text">Site words total count&#58;</span>
+      <span class="post-meta-item-text">站点总字数&#58;</span>
     
-    <span title="Site words total count">4k</span>
+    <span title="站点总字数">4k</span>
   
 
   
@@ -642,9 +686,9 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-      <span class="post-meta-item-text">Site reading time&#58;</span>
+      <span class="post-meta-item-text">站点总阅读次数&#58;</span>
     
-    <span title="Site reading time">4 mins.</span>
+    <span title="站点总阅读次数">3 mins.</span>
   
 </div>
 <div class="powered-by">
